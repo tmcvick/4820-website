@@ -7,6 +7,6 @@
   try {
     $conn = new mysqli($servername, $username, $password, $dbname);
   } catch (PDOException $e) {
-    echo "Connection Failed\n", e->getMessage();
+    echo "Connection Failed\n", $e->getMessage();
   }
   ?>
