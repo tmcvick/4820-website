@@ -7,6 +7,7 @@
   $username = $_REQUEST['username'];
   $gender = $_REQUEST['gender'];
 
+//Gender: 1 for male, 2 for female, 3 for other
   $sql = "INSERT into Student (Name, Major, AccountCreated, Username, GenderID) VALUES ('$name', '$major', '$created', '$username', '$gender')";
 
 
