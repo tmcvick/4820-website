@@ -7,7 +7,7 @@
   $username = $_REQUEST['username'];
   $gender = $_REQUEST['gender'];
 
-  $sql = "INSERT into Student (Name, Major, AccountCreated, Username, GenderID) VALUES ('$name', '$major', $created, '$username', $gender)";
+  $sql = "INSERT into Student (Name, Major, AccountCreated, Username, GenderID) VALUES ('$name', '$major', '$created', '$username', '$gender')";
 
 
   if($result = mysqli_query($conn, $sql)) {
