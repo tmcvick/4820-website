@@ -2,7 +2,7 @@
   include_once "include.php";
 
 //Gender: 1 for male, 2 for female, 3 for other
-  $sql = "Select * from Student";
+  $sql = "SELECT StudentId, Name, Major, AccountCreated, Username, gender FROM Student INNER JOIN Gender on Student.GenderID = Gender.genderID";
 
   if($result = mysqli_query($conn, $sql)) {
     $resultArray = array();
