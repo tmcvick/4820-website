@@ -3,7 +3,7 @@
 
   $name = $_REQUEST['name'];
   $major = $_REQUEST['major'];
-  $created = $_REQUEST['accountcreated'];
+  $created = date("Y-m-d H:i:s");
   $username = $_REQUEST['username'];
   $gender = $_REQUEST['gender'];
 
