@@ -12,5 +12,7 @@
       array_push($resultArray, $tempArray);
     }
     echo json_encode($resultArray);
+  } else {
+    echo $conn->error;
   }
  ?>
