@@ -11,6 +11,6 @@
       $tempArray = $row;
       array_push($resultArray, $tempArray);
     }
-    echo ($resultArray);
+    echo json_encode($resultArray);
   }
  ?>
