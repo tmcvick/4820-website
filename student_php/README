@@ -1,0 +1,5 @@
+Add Student: https://people.cs.clemson.edu/~tmcvick/cpsc4820/student_php/create_student.php?name=Tim McVicker&major=Computer%20Science&username=tmcvicker&gender=1
+
+Get All Students: https://people.cs.clemson.edu/~tmcvick/cpsc4820/student_php/get_students.php
+
+Get One Student: https://people.cs.clemson.edu/~tmcvick/cpsc4820/student_php/get_student.php?studentId=9
