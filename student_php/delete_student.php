@@ -9,7 +9,7 @@ $sql = "DELETE FROM Student WHERE StudentId = $id";
 
 if($result = mysqli_query($conn, $sql)) {
     echo '<script language="javascript">';
-    echo 'alert("Student Delete!")';
+    echo 'alert("Student Deleted!")';
     echo '</script>';
 } else {
     echo '<script language="javascript">';
