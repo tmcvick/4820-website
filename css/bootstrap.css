@@ -822,6 +822,11 @@ pre code {
   margin-left: -15px;
 }
 
+/* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+.row.content {
+    height: 1500px;
+}
+
 .row:before,
 .row:after {
   display: table;
@@ -893,7 +898,7 @@ pre code {
   position: relative;
   min-height: 1px;
   padding-right: 15px;
-  padding-left: 15px;
+  padding-left: 25px;
 }
 
 .col-xs-1,
@@ -2190,12 +2195,16 @@ textarea.input-lg {
   }
 }
 
+.form-horizontal {
+    padding-top: 50px;
+}
+
 .form-horizontal .control-label,
 .form-horizontal .radio,
 .form-horizontal .checkbox,
 .form-horizontal .radio-inline,
 .form-horizontal .checkbox-inline {
-  padding-top: 7px;
+  padding-top: 15px;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -4062,6 +4071,16 @@ textarea.input-group-sm > .input-group-btn > .btn {
   list-style: none;
 }
 
+/* Set gray background color and 100% height */
+.sidenav {
+    background-color: #f1f1f1;
+    height: 100%;
+    position: fixed;
+    margin-top: 3.5%;
+    padding-left: 25px;
+    padding-top: 25px;
+}
+
 .nav:before,
 .nav:after {
   display: table;
@@ -4090,7 +4109,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav > li > a {
   position: relative;
   display: block;
-  padding: 10px 15px;
+  padding-left: 10px;
+  padding-right: 0;
 }
 
 .nav > li > a:hover,
@@ -4221,6 +4241,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .nav-pills > li + li {
   margin-left: 2px;
+  margin-top: 5px;
 }
 
 .nav-pills > li.active > a,
