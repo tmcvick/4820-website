@@ -50,7 +50,7 @@
               }
               else {
                   $row = $result->fetch_assoc();
-                  echo '<table class="table">';
+                  echo '<table class="table table-hover table-bordered">';
                   echo '<tr>';
                   echo '<th>StudentId</th>';
                   echo '<th>Name</th>';
