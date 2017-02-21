@@ -36,7 +36,7 @@
                 $sql = "SELECT StudentId, Name, Major, AccountCreated, Username, gender FROM Student INNER JOIN Gender on Student.GenderID = Gender.genderID ORDER BY StudentId";
 
                 if($result = mysqli_query($conn, $sql)) {
-                    echo '<table>';
+                    echo '<table class="table">';
                     echo '<tr>';
                     echo '<th>StudentId</th>';
                     echo '<th>Name</th>';

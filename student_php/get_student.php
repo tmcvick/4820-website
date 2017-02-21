@@ -27,7 +27,7 @@
         <ul class="nav nav-pills nav-stacked">
           <li><a href="author.php">See All Students</a></li>
           <li><a href="createstudent.html">Create Student</a></li>
-          <li><a href="#">See One Student</a></li>
+          <li><a href="getstudentbyid.html">See One Student</a></li>
         </ul><br>
       </div>
 
@@ -42,7 +42,7 @@
 
           if($result = mysqli_query($conn, $sql)) {
               $row = $result->fetch_assoc();
-              echo '<table>';
+              echo '<table class="table">';
               echo '<tr>';
               echo '<th>StudentId</th>';
               echo '<th>Name</th>';
