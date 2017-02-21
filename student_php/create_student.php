@@ -20,10 +20,13 @@
 
 
   if($result = mysqli_query($conn, $sql)) {
-    echo "Student Created!";
+      echo '<script language="javascript">';
+      echo 'alert("Student Created!")';
+      echo '</script>';
   } else {
-    echo "$conn->error";
-    echo "Student creation failed";
+      echo '<script language="javascript">';
+      echo 'alert("Student Creation Failed!")';
+      echo '</script>';
   }
-
+    header("Refresh:0; url=author.php");
  ?>

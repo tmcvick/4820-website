@@ -41,24 +41,30 @@
           $sql = "SELECT StudentId, Name, Major, AccountCreated, Username, gender FROM Student INNER JOIN Gender on Student.GenderID = Gender.genderID WHERE StudentId = $studentId LIMIT 1";
 
           if($result = mysqli_query($conn, $sql)) {
-              $row = $result->fetch_assoc();
-              echo '<table class="table">';
-              echo '<tr>';
-              echo '<th>StudentId</th>';
-              echo '<th>Name</th>';
-              echo '<th>Major</th>';
-              echo '<th>Account Created</th>';
-              echo '<th>Username</th>';
-              echo '<th>Gender</th>';
-              echo '</tr>';
-              echo "<tr>";
-              echo "<td>" . $row['StudentId'] . "</td>";
-              echo "<td>" . $row['Name'] . "</td>";
-              echo "<td>" . $row['Major'] . "</td>";
-              echo "<td>" . $row['AccountCreated'] . "</td>";
-              echo "<td>" . $row['Username'] . "</td>";
-              echo "<td>" . $row['gender'] . "</td>";
-              echo "</tr>";
+              if($result->num_rows === 0)
+              {
+                  echo 'Student not found!';
+              }
+              else {
+                  $row = $result->fetch_assoc();
+                  echo '<table class="table">';
+                  echo '<tr>';
+                  echo '<th>StudentId</th>';
+                  echo '<th>Name</th>';
+                  echo '<th>Major</th>';
+                  echo '<th>Account Created</th>';
+                  echo '<th>Username</th>';
+                  echo '<th>Gender</th>';
+                  echo '</tr>';
+                  echo "<tr>";
+                  echo "<td>" . $row['StudentId'] . "</td>";
+                  echo "<td>" . $row['Name'] . "</td>";
+                  echo "<td>" . $row['Major'] . "</td>";
+                  echo "<td>" . $row['AccountCreated'] . "</td>";
+                  echo "<td>" . $row['Username'] . "</td>";
+                  echo "<td>" . $row['gender'] . "</td>";
+                  echo "</tr>";
+              }
           } else {
               echo $conn->error;
           }
