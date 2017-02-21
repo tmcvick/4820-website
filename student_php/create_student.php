@@ -8,6 +8,9 @@
   $gender = $_REQUEST['gender'];
 
 //Gender: 1 for male, 2 for female, 3 for other
+echo '<script language="javascript">';
+echo 'alert("' . $gender . '")';
+echo '</script>';
     if($gender == "male") {
         $gender = 1;
     } else if($gender == "female") {
