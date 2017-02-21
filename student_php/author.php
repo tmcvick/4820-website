@@ -46,7 +46,7 @@
                     echo '<th>Gender</th>';
                     echo '</tr>';
 
-                    while($row = $result->fetch_object()) {
+                    while($row = mysqli_fetch_assoc($result)) {
                             echo "<tr>";
                             echo "<td>" . $row['StudentId'] . "</td>";
                             echo "<td>" . $row['Name'] . "</td>";
