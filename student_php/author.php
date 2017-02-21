@@ -54,7 +54,7 @@
                             echo "<td>" . $row['AccountCreated'] . "</td>";
                             echo "<td>" . $row['Username'] . "</td>";
                             echo "<td>" . $row['gender'] . "</td>";
-                            echo "<td><form action=\"delete_student.php\" method=\"post\"><button name=\"delete\" type=\"submit\" value=" . $row['StudentId'] . ">Delete</button></form></td>";
+                            echo "<td><form action=\"delete_student.php\" method=\"post\"><button name=\"studentId\" type=\"submit\" value=" . $row['StudentId'] . ">Delete</button></form></td>";
 
                         echo "</tr>";
                     }
