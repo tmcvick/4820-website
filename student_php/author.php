@@ -45,10 +45,8 @@
                     echo '<th>Username</th>';
                     echo '<th>Gender</th>';
                     echo '</tr>';
-                    $resultArray = array();
-                    $tempArray = array();
+
                     while($row = $result->fetch_object()) {
-                            $row = $result->fetch_assoc();
                             echo "<tr>";
                             echo "<td>" . $row['StudentId'] . "</td>";
                             echo "<td>" . $row['Name'] . "</td>";
