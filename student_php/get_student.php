@@ -43,7 +43,10 @@
           if($result = mysqli_query($conn, $sql)) {
               if($result->num_rows === 0)
               {
-                  echo 'Student not found!';
+                  echo '<script language="javascript">';
+                  echo 'alert("Student Not Found!")';
+                  echo '</script>';
+                  header("Refresh:0; url=getstudentbyid.html");
               }
               else {
                   $row = $result->fetch_assoc();
