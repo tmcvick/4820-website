@@ -31,7 +31,7 @@
         </ul><br>
       </div>
 
-      <div class="col-sm-9" style="margin-left: 360px; margin-top: 50px;">
+      <div class="col-sm-9" style="margin-left: 288px; margin-top: 50px;">
           <?php
           include_once "include.php";
 
