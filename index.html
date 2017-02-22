@@ -8,22 +8,25 @@
 
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script src="./js/smooth-scroll.js"></script>
+
 </head>
 
 <body>
-
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li><a href="./index.html">Home</a></li>
+                <li><a href="student_php/author.php">Student Authoring Tool (demo)</a></li>
             </ul>
         </div>
     </div>
 </div>
-
 <!-- Main jumbotron  -->
-<div class="jumbotron" style="padding-bottom:1%">
+<div class="jumbotron" style="padding-bottom:1%" id="top">
     <div class="container">
         <div class="row">
             <div class="col-md-2">
@@ -41,65 +44,90 @@
     </div>
 </div>
 
-<div class="container">
-    <!-- Example row of columns -->
-    <div class="row" style="margin-left: 33%">
-        <h1>Assignments</h1>
-    </div>
-    <div class="row" style="padding-top: 5%">
-        <h2>Assignment 2</h2>
-        <h4>Description</h4>
-        <p>
-            ToDoList was created by Tim McVicker for Assignment 2 in CPSC4820, Spring 2017. <br>
-            This app allows a single user to create a todo list, which is shown as a list on the main activity. Each todo item has a short description, date due, and priority on a 1-5 scale. <br>
-            The app allows the user to add items to the list, delete items from the list, and edit items. All changes are persisted through an internal database.  The app also provides error checking, ensuring that when the user creates an item, the item contains all necessary requirements. <br>
-        </p>
-        <h4>Something New:</h4>
-        <p>
-            The app makes use of a SQLite internal database. It also makes use of new widgets such as a rating bar and a switch. Finally, it persists items as a user would expect while using the back button and cancel buttons.
-        </p>
-        <h4>Acknowledgments:</h4>
-        <p>
-            I used Codepath.com to learn how to connect my local database with an ArrayAdapter.  I also listened to Rob Percival's Android Tutorial to learn about basic widgets and images.  I also used the Android Studio developer guides to learn about ListViews.
-        </p>
-        <h4>Screenshots and Files</h4>
-        <li><a href="./files/tmcvick.a2.zip">Assignment 2 Download</a> </li>
-        <img src="images/A2/sc1.png">
-        <img src="images/A2/sc2.png">
-        <img src="images/A2/sc3.png">
-        <img src="images/A2/sc4.png">
-        <img src="images/A2/sc5.png">
-        <li><a href="files/javadoc_a2/index.html">Assignment 2 Javadoc</a> </li>
+<div class="container" style="margin-left: 0">
+    <div class="row content">
+        <div class="col-sm-3 sidenav" style="margin-top: 0">
+            <h4>Jump To:</h4>
+            <ul class="nav nav-pills nav-stacked">
+                <li><a href="#top">Top</a> </li>
+                <li><a href="#asg2">Assignment 2</a></li>
+                <li><a href="#asg3s">Assignment 3 Schema</a></li>
+                <li><a href="#asg1">Assignment 1</a></li>
+            </ul>
+            <br>
+        </div>
+        <div class="col-sm-9" style="margin-left: 360px">
+            <!-- Example row of columns -->
+            <div class="row" style="margin-left: 33%">
+                <h1>Assignments</h1>
+            </div>
+            <div class="row" style="padding-top: 5%" id="asg2">
+                <h2>Assignment 2</h2>
+                <h4>Description</h4>
+                <p>
+                    ToDoList was created by Tim McVicker for Assignment 2 in CPSC4820, Spring 2017. <br>
+                    This app allows a single user to create a todo list, which is shown as a list on the main activity.
+                    Each todo item has a short description, date due, and priority on a 1-5 scale. <br>
+                    The app allows the user to add items to the list, delete items from the list, and edit items. All
+                    changes are persisted through an internal database. The app also provides error checking, ensuring
+                    that when the user creates an item, the item contains all necessary requirements. <br>
+                </p>
+                <h4>Something New:</h4>
+                <p>
+                    The app makes use of a SQLite internal database. It also makes use of new widgets such as a rating
+                    bar and a switch. Finally, it persists items as a user would expect while using the back button and
+                    cancel buttons.
+                </p>
+                <h4>Acknowledgments:</h4>
+                <p>
+                    I used Codepath.com to learn how to connect my local database with an ArrayAdapter. I also listened
+                    to Rob Percival's Android Tutorial to learn about basic widgets and images. I also used the Android
+                    Studio developer guides to learn about ListViews.
+                </p>
+                <h4>Screenshots and Files</h4>
+                <li><a href="./files/tmcvick.a2.zip">Assignment 2 Download</a></li>
+                <img src="images/A2/sc1.png">
+                <img src="images/A2/sc2.png">
+                <img src="images/A2/sc3.png">
+                <img src="images/A2/sc4.png">
+                <img src="images/A2/sc5.png">
+                <li><a href="files/javadoc_a2/index.html">Assignment 2 Javadoc</a></li>
 
+            </div>
+            <div class="row" style="padding-top: 10%" id="asg3s">
+                <h2>Assignment 3 Schema</h2>
+                <img src="./images/a3.tmcvick.schema.png">
+            </div>
+            <div class="row" style="padding-top: 5%" id="asg1">
+                <h2>Assignment 1</h2>
+                <p>The app will calculate your BAC based on personal stats and a list on drinks that are input. It will
+                    also
+                    let you guess your BAC and tell you how far off you are.
+                    I found all of my images from google.com, one from the play store. I also want to credit
+                    StackOverflow
+                    for finding some solutions to coding problems.
+                    I also found the BAC formula from endmemo.com. The cool part of the app is that the final activity
+                    will
+                    change colors based on your calculated BAC.
+                    If it is under 0.08, it turns green. If it's under 0.25 it turns yellow, and anything higher that
+                    that
+                    it turns red.
+                </p>
+                <li><a href="./files/tmcvick.a1.zip">Assignment 1 Download</a></li>
+                <img src="images/sc1.png">
+                <img src="images/sc2.png">
+                <img src="images/sc25.png">
+                <img src="images/sc3.png">
+            </div>
+        </div> <!-- /container -->
     </div>
-    <div class="row" style="padding-top: 10%">
-        <h2>Assignment 3 Schema</h2>
-        <img src="./images/a3.tmcvick.schema.png">
-    </div>
-    <div class="row" style="padding-top: 5%">
-        <h2>Assignment 1</h2>
-        <p>The app will calculate your BAC based on personal stats and a list on drinks that are input. It will also
-            let you guess your BAC and tell you how far off you are.
-            I found all of my images from google.com, one from the play store. I also want to credit StackOverflow
-            for finding some solutions to coding problems.
-            I also found the BAC formula from endmemo.com. The cool part of the app is that the final activity will
-            change colors based on your calculated BAC.
-            If it is under 0.08, it turns green. If it's under 0.25 it turns yellow, and anything higher that that
-            it turns red.
-        </p>
-        <li><a href="./files/tmcvick.a1.zip">Assignment 1 Download</a></li>
-        <img src="images/sc1.png">
-        <img src="images/sc2.png">
-        <img src="images/sc25.png">
-        <img src="images/sc3.png">
-    </div>
-</div> <!-- /container -->
+</div>
 
-<hr>
+        <hr>
 
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 </body>
 </html>

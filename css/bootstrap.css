@@ -4073,12 +4073,13 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 /* Set gray background color and 100% height */
 .sidenav {
-    background-color: #f1f1f1;
-    height: 100%;
+    background-color: #222222;
+    height: 25%;
     position: fixed;
     margin-top: 3.5%;
     padding-left: 25px;
     padding-top: 25px;
+    color: #999999;
 }
 
 .nav:before,
@@ -4552,6 +4553,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   padding-top: 10px;
   padding-bottom: 10px;
   line-height: 20px;
+  padding-right: 15px;
 }
 
 @media (max-width: 767px) {
@@ -5232,7 +5234,6 @@ a.list-group-item.active > .badge,
 
 .jumbotron {
   padding: 30px;
-  margin-bottom: 30px;
   font-size: 21px;
   font-weight: 200;
   line-height: 2.1428571435;
