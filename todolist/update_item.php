@@ -8,6 +8,9 @@ $updated = 'CURRENT_TIMESTAMP';
 $duedate = $_REQUEST['duedate'];
 $deleted = 'false';
 
+echo '<script language="javascript">';
+echo 'alert("'. $duedate . '")';
+echo '</script>';
 $sql = "UPDATE Item SET deleted_ind=$deleted, title='$title', priority='$priority', updated_at=$updated, due_date=$duedate WHERE id = $id";
 
 
