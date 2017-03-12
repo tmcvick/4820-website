@@ -44,7 +44,7 @@
                 <div class="form-group">
                     <label class="control-label col-sm-2" for="id">Id:</label>
                     <div class="col-sm-10">
-                        <input readonly type="number" class="form-control" id="id" name="id" value="<?php echo $id ?>">
+                        <input type="text" class="form-control" id="id" name="id" value="<?php echo $id ?>" readonly>
                     </div>
                 </div>
                 <div class="form-group">
