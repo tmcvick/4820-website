@@ -4,7 +4,7 @@ include_once "include.php";
 $id = $_REQUEST['id'];
 
 
-$sql = "UPDATE ITEM SET deleted_ind=true WHERE id = $id";
+$sql = "UPDATE Item SET deleted_ind=true WHERE id = $id";
 
 
 if($result = mysqli_query($conn, $sql)) {
