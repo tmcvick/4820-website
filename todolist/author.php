@@ -59,7 +59,7 @@
                             <form action=\"getforupdate.php\" method=\"post\">
                                 <input type=\"hidden\" class=\"form-control\" id=\"title\" name=\"title\" value=" . $row['title'] . ">
                                 <input type=\"hidden\" class=\"form-control\" id=\"priority\" name=\"priority\" value=" . $row['priority'] . ">
-                                <input type=\"hidden\" class=\"form-control\" id=\"duedate\" name=\"duedate\" value=" . $row['duedate'] . ">
+                                <input type=\"hidden\" class=\"form-control\" id=\"duedate\" name=\"duedate\" value=" . $row['due_date'] . ">
                                 <button name=\"id\" type=\"submit\" value=" . $row['id'] . ">Update</button>
                             </form>
                            </td>";
