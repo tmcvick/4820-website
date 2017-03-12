@@ -52,7 +52,7 @@
                     echo "<td>" . $row['id'] . "</td>";
                     echo "<td>" . $row['title'] . "</td>";
                     echo "<td>" . $row['priority'] . "</td>";
-                    echo "<td>" . $row['due_date'] . "</td>";
+                    echo "<td>" . date_format($row['due_date'], 'Y-m-d') . "</td>";
                     echo "<td>" . $row['updated_at'] . "</td>";
                     echo "<td><form action=\"delete_item.php\" method=\"post\"><button name=\"id\" type=\"submit\" value=" . $row['id'] . ">Delete</button></form></td>";
 

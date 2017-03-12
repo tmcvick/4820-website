@@ -13,7 +13,7 @@ if($result = mysqli_query($conn, $sql)) {
     echo '</script>';
 } else {
     echo '<script language="javascript">';
-    echo 'alert("Item Deletion Failed! + ' . $conn->error . '")';
+    echo 'alert("Item Deletion Failed!")';
     echo '</script>';
 }
 header("Refresh:0; url=author.php");
