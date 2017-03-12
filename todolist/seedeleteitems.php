@@ -55,9 +55,10 @@
                     echo "<td>" . $row['priority'] . "</td>";
                     echo "<td>" . date( 'm/d/y', strtotime($row['due_date']))  . "</td>";
                     echo "<td>" . $row['updated_at'] . "</td>";
-                    echo "<td><form action=\"author.php\" method=\"post\"><button name=\"id\" type=\"submit\" value=" . $row['id'] . ">Go Back</button></form></td>";
                     echo "</tr>";
                 }
+                echo "<form action=\"author.php\" method=\"post\"><button name=\"id\" type=\"submit\" value=" . $row['id'] . ">Go Back</button></form>";
+
             } else {
                 echo $conn->error;
             }
