@@ -39,7 +39,7 @@
             $id = $_REQUEST['id'];
 
             //Gender: 1 for male, 2 for female, 3 for other
-            $sql = "SELECT id, title, priority, due_date, deleted_ind, updated_at FROM Item WHERE id = $id LIMIT 1";
+            $sql = "SELECT id, title, priority, FORMAT(due_date,'YYYY-MM-DD'), deleted_ind, updated_at FROM Item WHERE id = $id LIMIT 1";
 
             if($result = mysqli_query($conn, $sql)) {
                 if($result->num_rows === 0)
@@ -63,7 +63,7 @@
                     echo "<td>" . $row['id'] . "</td>";
                     echo "<td>" . $row['title'] . "</td>";
                     echo "<td>" . $row['priority'] . "</td>";
-                    echo "<td>" . date_format($row['due_date'], 'Y-m-d') . "</td>";
+                    echo "<td>" . $row['due_date'] . "</td>";
                     echo "<td>" . $row['updated_at'] . "</td>";
                     echo "<td><form action=\"delete_item.php.php\" method=\"post\"><button name=\"id\" type=\"submit\" value=" . $row['id'] . ">Delete</button></form></td>";
                     echo "</tr>";
