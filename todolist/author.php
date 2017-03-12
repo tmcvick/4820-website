@@ -55,6 +55,14 @@
                     echo "<td>" . date( 'm/d/y', strtotime($row['due_date']))  . "</td>";
                     echo "<td>" . $row['updated_at'] . "</td>";
                     echo "<td><form action=\"delete_item.php\" method=\"post\"><button name=\"id\" type=\"submit\" value=" . $row['id'] . ">Delete</button></form></td>";
+                    echo "<td>    
+                            <form action=\"getforupdate.php\" method=\"post\">
+                                <input type=\"hidden\" class=\"form-control\" id=\"title\" name=\"title\" value=" . $row['title'] . ">
+                                <input type=\"hidden\" class=\"form-control\" id=\"priority\" name=\"priority\" value=" . $row['priority'] . ">
+                                <input type=\"hidden\" class=\"form-control\" id=\"duedate\" name=\"duedate\" value=" . $row['duedate'] . ">
+                                <button name=\"id\" type=\"submit\" value=" . $row['id'] . ">Update</button>
+                            </form>
+                           </td>";
 
                     echo "</tr>";
                 }

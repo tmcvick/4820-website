@@ -65,7 +65,7 @@
                     echo "<td>" . $row['priority'] . "</td>";
                     echo "<td>" . date( 'm/d/y', strtotime($row['due_date'])) . "</td>";
                     echo "<td>" . $row['updated_at'] . "</td>";
-                    echo "<td><form action=\"delete_item.php.php\" method=\"post\"><button name=\"id\" type=\"submit\" value=" . $row['id'] . ">Delete</button></form></td>";
+                    echo "<td><form action=\"delete_item.php\" method=\"post\"><button name=\"id\" type=\"submit\" value=" . $row['id'] . ">Delete</button></form></td>";
                     echo "</tr>";
                 }
             } else {
