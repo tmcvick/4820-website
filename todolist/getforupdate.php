@@ -1,3 +1,13 @@
+<?php
+    $id = $_REQUEST['id'];
+    $title = $_REQUEST['title'];
+    $priority = $_REQUEST['priority'];
+    $duedate = $_REQUEST['due_date'];
+
+echo '<script language="javascript">';
+echo 'alert("'. $title . '")';
+echo '</script>';
+?>
 <html lang="en">
 <head>
     <meta charset="utf-8">
