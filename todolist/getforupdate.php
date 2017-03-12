@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Create Student</title>
+    <title>Create Item</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.css" rel="stylesheet">
@@ -30,6 +30,8 @@
                 <li><a href="author.php">See All Items</a></li>
                 <li><a href="createitem.html">Create Item</a></li>
                 <li><a href="getitembyid.html">See One Item</a></li>
+                <li><a href="seedeleteitems.php">See Deleted Items</a></li>
+
             </ul><br>
         </div>
 
