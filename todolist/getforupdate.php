@@ -39,34 +39,30 @@
             $title = $_REQUEST['title'];
             $priority = $_REQUEST['priority'];
             $duedate = $_REQUEST['due_date'];
-
-            echo '<script language="javascript">';
-            echo 'alert("'. $title . '")';
-            echo '</script>';
             ?>
             <form class="form-horizontal" action="update_item.php" method="post">
                 <div class="form-group">
                     <label class="control-label col-sm-2" for="id">Id:</label>
                     <div class="col-sm-10">
-                        <input readonly type="number" class="form-control" id="id" name="id" placeholder="<?php $_REQUEST['id'] ?>">
+                        <input readonly type="number" class="form-control" id="id" name="id" placeholder="<?php echo $id ?>">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-sm-2" for="title">Title:</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="title" name="title" value="<?php $_REQUEST['title'] ?>">
+                        <input type="text" class="form-control" id="title" name="title" value="<?php echo $title ?>">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-sm-2" for="priority">Priority:</label>
                     <div class="col-sm-10">
-                        <input type="number" class="form-control" id="priority" name="priority" value="<?php $_REQUEST['priority'] ?>">
+                        <input type="number" class="form-control" id="priority" name="priority" value="<?php echo $priority ?>">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-sm-2" for="duedate">Due Date:</label>
                     <div class="col-sm-10">
-                        <input type="date" min="2017-03-13" class="form-control" id="duedate" name="duedate" value="<?php $_REQUEST['due_date'] ?>">
+                        <input type="date" min="2017-03-13" class="form-control" id="duedate" name="duedate" value="<?php echo $duedate ?>">
                     </div>
                 </div>
                 <div class="form-group">
