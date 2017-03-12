@@ -59,7 +59,7 @@
                             <form action=\"getforupdate.php\" method=\"post\">
                                 <input type=\"hidden\" class=\"form-control\" id=\"title\" name=\"title\" value=" . $row['title'] . ">
                                 <input type=\"hidden\" class=\"form-control\" id=\"priority\" name=\"priority\" value=" . $row['priority'] . ">
-                                <input type=\"hidden\" class=\"form-control\" id=\"due_date\" name=\"due_date\" value=" . date( 'm/d/y', strtotime($row['due_date'])) . ">
+                                <input type=\"hidden\" class=\"form-control\" id=\"due_date\" name=\"due_date\" value=" . date( 'yyyy-MM-dd', strtotime($row['due_date'])) . ">
                                 <input type=\"hidden\" class=\"form-control\" id=\"id\" name=\"id\" value=" . $row['id'] . ">
                                 <button name=\"id\" type=\"submit\">Update</button>
                             </form>
