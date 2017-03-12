@@ -1,13 +1,3 @@
-<?php
-    $id = $_REQUEST['id'];
-    $title = $_REQUEST['title'];
-    $priority = $_REQUEST['priority'];
-    $duedate = $_REQUEST['due_date'];
-
-echo '<script language="javascript">';
-echo 'alert("'. $title . '")';
-echo '</script>';
-?>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -44,6 +34,16 @@ echo '</script>';
         </div>
 
         <div class="col-sm-9" style="margin-left: 288px; margin-top: 50px;">
+            <?php
+            $id = $_REQUEST['id'];
+            $title = $_REQUEST['title'];
+            $priority = $_REQUEST['priority'];
+            $duedate = $_REQUEST['due_date'];
+
+            echo '<script language="javascript">';
+            echo 'alert("'. $title . '")';
+            echo '</script>';
+            ?>
             <form class="form-horizontal" action="update_item.php" method="post">
                 <div class="form-group">
                     <label class="control-label col-sm-2" for="id">Id:</label>
