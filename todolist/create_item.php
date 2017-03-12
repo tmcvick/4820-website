@@ -7,7 +7,7 @@ $updated = 'CURRENT_TIMESTAMP';
 $duedate = $_REQUEST['duedate'];
 $deleted = 'false';
 
-$sql = "INSERT into Item (title, priority, due_date, deleted_ind, updated_at) VALUES ('$title', '$priority', '$duedate', '$deleted', '$updated')";
+$sql = "INSERT into Item (title, priority, due_date, deleted_ind, updated_at) VALUES ('$title', '$priority', '$duedate', $deleted, $updated)";
 
 
 if($result = mysqli_query($conn, $sql)) {
