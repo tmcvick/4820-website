@@ -35,7 +35,7 @@
             include_once "include.php";
 
             //Gender: 1 for male, 2 for female, 3 for other
-            $sql = "SELECT id, title, priority, FORMAT(due_date,'YYYY-MM-DD'), deleted_ind, updated_at FROM Item WHERE deleted_ind = 0";
+            $sql = "SELECT id, title, priority, due_date, deleted_ind, updated_at FROM Item WHERE deleted_ind = 0";
 
             if($result = mysqli_query($conn, $sql)) {
                 echo '<table class="table table-hover table-bordered">';
@@ -52,7 +52,7 @@
                     echo "<td>" . $row['id'] . "</td>";
                     echo "<td>" . $row['title'] . "</td>";
                     echo "<td>" . $row['priority'] . "</td>";
-                    echo "<td>" . $row['due_date'] . "</td>";
+                    echo "<td>" . date( 'm/d/y', strtotime($row['due_date']))  . "</td>";
                     echo "<td>" . $row['updated_at'] . "</td>";
                     echo "<td><form action=\"delete_item.php\" method=\"post\"><button name=\"id\" type=\"submit\" value=" . $row['id'] . ">Delete</button></form></td>";
 
