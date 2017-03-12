@@ -57,8 +57,6 @@
                     echo "<td>" . $row['updated_at'] . "</td>";
                     echo "</tr>";
                 }
-                echo "<form action=\"author.php\" method=\"post\"><button name=\"id\" type=\"submit\" value=" . $row['id'] . ">Go Back</button></form>";
-
             } else {
                 echo $conn->error;
             }
