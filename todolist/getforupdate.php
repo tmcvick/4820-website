@@ -2,7 +2,10 @@
     $id = $_REQUEST['id'];
     $title = $_REQUEST['title'];
     $priority = $_REQUEST['priority'];
-    $duedate = $_REQUEST['duedate'];
+    $duedate = $_REQUEST['due_date'];
+echo '<script language="javascript">';
+echo 'alert("' . $id . '")';
+echo '</script>';
 ?>
 <html lang="en">
 <head>
@@ -31,7 +34,7 @@
 <div class="container" style="margin-left: 0">
     <div class="row content">
         <div class="col-sm-3 sidenav">
-            <h4>Student Options</h4>
+            <h4>Item Options</h4>
             <ul class="nav nav-pills nav-stacked">
                 <li><a href="author.php">See All Items</a></li>
                 <li><a href="createitem.html">Create Item</a></li>
@@ -50,19 +53,19 @@
                 <div class="form-group">
                     <label class="control-label col-sm-2" for="title">Title:</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="title" name="title" placeholder="Enter task title" value="<?php $title ?>">
+                        <input type="text" class="form-control" id="title" name="title" value="<?php $title ?>">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-sm-2" for="priority">Priority:</label>
                     <div class="col-sm-10">
-                        <input type="number" class="form-control" id="priority" placeholder="Enter priority" name="priority" value="<?php $priority ?>">
+                        <input type="number" class="form-control" id="priority" name="priority" value="<?php $priority ?>">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-sm-2" for="duedate">Due Date:</label>
                     <div class="col-sm-10">
-                        <input type="date" min="2017-03-13" class="form-control" id="duedate" placeholder="Enter Due Date" name="duedate" value="<?php $duedate ?>">
+                        <input type="date" min="2017-03-13" class="form-control" id="duedate" name="duedate" value="<?php $duedate ?>">
                     </div>
                 </div>
                 <div class="form-group">
