@@ -7,11 +7,11 @@
  */
 include_once "include.php";
 
-$id = $_REQUEST['$id'];
+$id = $_REQUEST['id'];
 
 $sql = "SELECT * from user INNER JOIN user_security on user_security.user_id = user.id where user.id='$id' LIMIT 1";
 if($result = mysqli_query($conn, $sql)) {
-    if($result->num_rows === 0)
+    if($result->num_rows == 0)
     {
         echo 'No user found';
     }
