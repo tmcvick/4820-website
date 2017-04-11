@@ -22,5 +22,5 @@ if($result = mysqli_query($conn, $sql)) {
     $lastID = mysqli_insert_id($conn);
     echo 'transaction id created: ' . $lastID . '<br>';
 } else {
-    echo '';
+    echo $conn->error;
 }
