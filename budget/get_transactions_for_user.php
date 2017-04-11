@@ -16,8 +16,8 @@ if($result = mysqli_query($conn, $sql)) {
         echo 'No transactions found';
     }
     else {
-        $row = $result->fetch_assoc();
-        echo json_encode($row);
+        while($row = $result->fetch_assoc())
+            echo json_encode($row);
     }
 } else {
     echo $conn->error;
