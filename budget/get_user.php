@@ -7,9 +7,9 @@
  */
 include_once "include.php";
 
-$id = $_REQUEST['id'];
+$uname = $_REQUEST['uname'];
 
-$sql = "SELECT * from user INNER JOIN user_security on user_security.user_id = user.id where user.id='$id' LIMIT 1";
+$sql = "SELECT * from user INNER JOIN user_security on user_security.user_id = user.id where user.username='$uname' LIMIT 1";
 if($result = mysqli_query($conn, $sql)) {
     if($result->num_rows == 0)
     {
