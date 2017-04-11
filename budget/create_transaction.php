@@ -14,10 +14,9 @@ $days = $_REQUEST['days'];
 $isExpense = $_REQUEST['expense'];
 $uid = $_REQUEST['user'];
 $lid = $_REQUEST['location'];
-$sync = 0;
 
-$sql = "INSERT into transaction (description, amount, date, synced, recurring_ind, recurring_in_days, expense_ind, user_id, location_id) 
-        VALUES ('$desc', '$amount', '$date', '$sync', '$recInd', '$days', '$isExpense', '$uid', '$lid')";
+$sql = "INSERT into transaction (description, amount, date, recurring_ind, recurring_in_days, expense_ind, user_id, location_id) 
+        VALUES ('$desc', '$amount', '$date', '$recInd', '$days', '$isExpense', '$uid', '$lid')";
 if($result = mysqli_query($conn, $sql)) {
     $lastID = mysqli_insert_id($conn);
     echo 'transaction id created: ' . $lastID . '<br>';

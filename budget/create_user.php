@@ -10,9 +10,8 @@ $name = $_REQUEST['name'];
 $uname = $_REQUEST['uname'];
 $balance = $_REQUEST['balance'];
 $pword = $_REQUEST['pword'];
-$sync = 0;
 
-$sql = "INSERT into user (name, username, balance, synced) VALUES ('$name', '$uname', '$balance', '$sync')";
+$sql = "INSERT into user (name, username, balance) VALUES ('$name', '$uname', '$balance')";
 if($result = mysqli_query($conn, $sql)) {
     $lastID = mysqli_insert_id($conn);
     $sql = "INSERT into user_security (user_id, password) VALUES ('$lastID', '$pword')";
