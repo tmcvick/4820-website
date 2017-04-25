@@ -8,9 +8,9 @@
 include_once "include.php";
 $desc = $_REQUEST['desc'];
 $amount = $_REQUEST['amount'];
-$date = date("Y-m-d H:i:s");
-$recInd = $_REQUEST['rec'];
-$days = $_REQUEST['days'];
+$date = $_REQUEST['date'];
+$recInd = 0;//$_REQUEST['rec'];
+$days = 0;//$_REQUEST['days'];
 $isExpense = $_REQUEST['expense'];
 $uid = $_REQUEST['user'];
 $lid = $_REQUEST['location'];
