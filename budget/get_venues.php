@@ -5,6 +5,8 @@
  * Date: 4/24/17
  * Time: 23:52
  */
+include_once "include.php";
+
 $sql = "SELECT * from location";
 if($result = mysqli_query($conn, $sql)) {
     if($result->num_rows == 0)
