@@ -7,9 +7,8 @@
  */
 include_once "include.php";
 
-$id = $_REQUEST['id'];
 
-$sql = "SELECT * from transaction  where user_id='$id'";
+$sql = "SELECT * from transaction";
 if($result = mysqli_query($conn, $sql)) {
     if($result->num_rows == 0)
     {
